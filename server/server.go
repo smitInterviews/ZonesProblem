@@ -72,11 +72,11 @@ func init() {
 	Error = log.New(multi,
 		"ERROR: ",
 		log.Ldate|log.Ltime|log.Lshortfile)
-	os.Setenv("GOPATH", "~/gowork2")
+	//os.Setenv("GOPATH", "~/gowork2")
 }
 
 func instantiateDependencies() {
-	dataReader, err := NewZoneDataReader(os.Getenv("GOPATH") + "/src/github.com/ZonesProblem/csvData/los-angeles-zone-data.csv")
+	dataReader, err := NewZoneDataReader(os.Getenv("GOPATH") + "/src/github.com/ZonesProblem/server/csvData/los-angeles-zone-data.csv")
 	if err != nil {
 		Error.Printf("Error instantiating zone data reader: %s\n", err)
 		panic(err)
