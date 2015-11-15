@@ -103,5 +103,5 @@ func main() {
 	instantiateDependencies()
 	r := gin.Default()
 	r.GET("/zone/:origin_code/distancematrix", GetZone)
-	r.Run(fmt.Sprintf("%s:%d", "localhost", 8080))
+	r.Run(fmt.Sprintf("%s:%d", "0.0.0.0", 8080))
 }
